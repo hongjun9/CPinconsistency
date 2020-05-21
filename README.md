@@ -146,7 +146,7 @@ The *individual* consists of the vulnerability code, input, output, and ranking.
 	pr: proportion of crossover to mutaiton (default 0.9)
 
 
-##How to run
+## How to run
 	
 	# run the main evolutionary search engine with a default setting.
 	~/cpii/src/main.py 
