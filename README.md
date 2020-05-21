@@ -13,7 +13,7 @@
 }
 ```-->
 
-##Introduction
+## Introduction
 
 **Cyber-Physical Inconsistency** is a new type of vulnerability for robotic vehicles (RVs). These vulnerabilities are induced by the inherent incompleteness of general-purpose, high-level programming languages in describing complex physics. This safety related and can be exploited by solely manipulating environmental conditions, which leads to physical damages and life-threatening. 
 
@@ -21,9 +21,9 @@ We provide a testing based tool to identify the CP-inconsistency vulnerabilities
 
 This provides a prototype of our tool to play with a sample robotic system (Arducopter), including a simulated vehicle, gazebo models, and control-guided evolutionary search. 
 
-##Setup
+## Setup
 
-###Software Requirements
+### Software Requirements
 1. Matlab R2017B or above
 2. VMware Workstation 12.0 or above
 3. VMiamge (apm_gazebo) includes:
@@ -36,13 +36,13 @@ This provides a prototype of our tool to play with a sample robotic system (Ardu
     - Mission Generator
     - CPII 1.0 (test engine)
 
-###Installation
+### Installation
 
 The provided VM image (id: apm / password: apm) includes all the programs and related packages to test CPII tool, expect the Matlab tools. For the system modeling, Matlab is essential and should be installed in your host machine. 
 
 In this setup, we assume that the user knows how to make the system model with System Identification (SI) technique. In this tutorial, we do not provide the details. Please read our previous paper "Detecting attacks against robotic vehicles: A control invariant approach (CCS'18)" and the previous tutorial at: https://github.com/hongjun9/CPS_Invariant
 
-##Evolutionary Searching
+## Evolutionary Searching
 
 CPII Evolutionary search requires 1) cyber costs, 2) physical costs, 3) search engine. 
 
@@ -153,7 +153,7 @@ For optional arguments
 
 	~/cpii/src/main.py --help
 	
-###Outputs
+### Outputs
 
 During the evolutionary searching, CPII logs internal information, simulaiton logs and save the finding results seperately. The directory includes the outputs as follows.
 
