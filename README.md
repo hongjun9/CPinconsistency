@@ -52,7 +52,7 @@ CPII Evolutionary search requires 1) cyber costs, 2) physical costs, 3) search e
 
 The cyber cost function is constructed from the control program via static analysis. It essentially represents the degree of the cyber anomaly (see Section 4.2). The profiling code will be inserted into the control program to collect cyber costs while the simulation is running. 
     
-    Example inserted code:     ~/ardupilot/ArduCopter/crash_check.cpp
+    An example at:     ~/ardupilot/ArduCopter/crash_check.cpp
     
     e_c1 = CRASH_CHECK_ACCEL_MAX - land_accel_ef_filter.get().length();
     e_c2 = attitude_control->get_att_error_angle_deg() - CRASH_CHECK_ANGLE_DEVIATION_DEG;
