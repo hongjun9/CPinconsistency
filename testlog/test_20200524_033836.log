@@ -1,0 +1,64 @@
+###### [#20200524_033836_g0_s1 / 10] Evaluation (SIM) starts ###### 
+=== Reading Param file: /home/apm/cpii/param.txt
+20200524_033836_g0_s1
+0 0 0 0
+0
+0
+10 3 3
+>> Saved: Fuzz (Param): /home/apm/cpii/param.txt
+=== Reading model file: /home/apm/ardupilot_gazebo/models/fs_gray_wall/model.sdf
+ model: {'name': 'fs_gray_wall'}
+  static: false
+  link: {'name': 'link'}
+    inertial
+      mass:36.0
+      *mass:36.0
+      inertia
+        ixx:28.0
+        iyy:10.0
+        izz:15.0
+        *ixx:28.0
+        *iyy:10.0
+        *izz:15.0
+    collision: {'name': 'collision'}
+      geometry
+        size: 3 3 10
+      surface
+        contact
+    visual: {'name': 'visual'}
+      geometry
+        size: 3 3 10
+    pose: 0 0 1.4 0 0 0
+>> Saved: Fuzz (Model): /home/apm/ardupilot_gazebo/models/fs_gray_wall/model.sdf
+=== Reading world file: /home/apm/ardupilot_gazebo/worlds/copter.world
+ world: {'name': 'default'}
+  physics: {'type': 'ode'}
+  light: {'type': 'directional', 'name': 'sun'}
+  model: {'name': 'copter_iris'}
+  plugin: {'name': 'wind', 'filename': 'libFuzzWindPlugin.so'}
+    wind
+      windDirection: 0 0 0
+      windForceMean: 0
+      windGustDirection: 164.0 6.0 81.0
+      *windGustDirection: 164.0 6.0 81.0
+      windGustDuration: 6.0
+      *windGustDuration: 6.0
+      windGustStart: 30
+      *windGustDuration: 6.0
+      windGustForceMean: 0
+      xyz_offset: 0 0 0
+  gravity:  0 0 -9.8 
+  magnetic_field 6e-06 2.3e-05 -4.2e-05
+  atmosphere: {'type': 'adiabatic'}
+    temperature: 298.15
+    pressure: 101325.29
+    temperature_gradient: -0.0066
+  scene
+>> Saved: Fuzz (World): /home/apm/ardupilot_gazebo/worlds/copter.world
+#20200524_033836_g0_s1 Dummy Simulation running ...
+=== Collecting outputs: /home/apm/cpii/outputs/simout_20200524_033836_g0_s1.log /home/apm/ardupilot/Tools/autotest/logs/00000158.BIN
+[INPUT_VECTOR] [['log_id', '20200524_033836_g0_s1', 'tunnel', '0 0 0 0', 'timeout', 0, 'battcap', 0, 'nums', 3, 3, 10], ['static', 'false', 'mass', '36.0', 'ixx', '28.0', 'iyy', '10.0', 'izz', '15.0', 'size', '3 3 10'], ['windGustDirection', '164.0 6.0 81.0', 'windGustDuration', '6.0', 'windGustDuration', '6.0', 'magnetic_field', '6e-06 2.3e-05 -4.2e-05', 'temperature', '298.15', 'pressure', '101325.29', 'temperature_gradient', '-0.0066']]
+[OUTPUT_VECTOR] (5, [9.6103, 1.8497, 1.239], [3.7014, 9.8052, 0.3639])
+[CPI_OUTPUT] 5
+(input) [['log_id', '20200524_033836_g0_s1', 'tunnel', '0 0 0 0', 'timeout', 0, 'battcap', 0, 'nums', 3, 3, 10], ['static', 'false', 'mass', '36.0', 'ixx', '28.0', 'iyy', '10.0', 'izz', '15.0', 'size', '3 3 10'], ['windGustDirection', '164.0 6.0 81.0', 'windGustDuration', '6.0', 'windGustDuration', '6.0', 'magnetic_field', '6e-06 2.3e-05 -4.2e-05', 'temperature', '298.15', 'pressure', '101325.29', 'temperature_gradient', '-0.0066']]
+(c_dev) [9.6103, 1.8497, 1.239] (p_dev) [3.7014, 9.8052, 0.3639]
