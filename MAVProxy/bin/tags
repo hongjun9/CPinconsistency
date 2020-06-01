@@ -1,0 +1,579 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+App	mavplayback.py	/^class App(object):$/;"	c
+BLANK_TILES	mp_tile.py	/^BLANK_TILES = set(["d16657bbee25d7f15c583f5c5bf23f50",$/;"	v
+CR	miniterm.py	/^class CR(Transform):$/;"	c
+CRLF	miniterm.py	/^class CRLF(Transform):$/;"	c
+Colorize	miniterm.py	/^class Colorize(Transform):$/;"	c
+Console	miniterm.py	/^    class Console(ConsoleBase):$/;"	c
+ConsoleBase	miniterm.py	/^class ConsoleBase(object):$/;"	c
+DebugIO	miniterm.py	/^class DebugIO(Transform):$/;"	c
+EOL_TRANSFORMATIONS	miniterm.py	/^EOL_TRANSFORMATIONS = {$/;"	v
+IMUCheckFail	MPU6KSearch.py	/^def IMUCheckFail(filename):$/;"	f
+LF	miniterm.py	/^class LF(Transform):$/;"	c
+LoadImage	mavplayback.py	/^def LoadImage(filename):$/;"	f
+MAVFunctions	mavproxy.py	/^class MAVFunctions(object):$/;"	c
+MEState	MAVExplorer.py	/^class MEState(object):$/;"	c
+MEStatus	MAVExplorer.py	/^class MEStatus(object):$/;"	c
+MPSlipMap	mp_slipmap.py	/^class MPSlipMap():$/;"	c
+MPState	mavproxy.py	/^class MPState(object):$/;"	c
+MPStatus	mavproxy.py	/^class MPStatus(object):$/;"	c
+MPTile	mp_tile.py	/^class MPTile:$/;"	c
+Miniterm	miniterm.py	/^class Miniterm(object):$/;"	c
+NoControls	miniterm.py	/^class NoControls(NoTerminal):$/;"	c
+NoTerminal	miniterm.py	/^class NoTerminal(Transform):$/;"	c
+Out	miniterm.py	/^    class Out(object):$/;"	c
+PlotData	mavfft_isb.py	/^    class PlotData(object):$/;"	c	function:mavfft_fttd
+PrintSummary	mavsummarize.py	/^def PrintSummary(logfile):$/;"	f
+Printable	miniterm.py	/^class Printable(Transform):$/;"	c
+REPLACEMENT_MAP	miniterm.py	/^    REPLACEMENT_MAP = dict((x, 0x2400 + x) for x in range(32) if unichr(x) not in '\\r\\n\\b\\t')$/;"	v	class:NoTerminal
+REPLACEMENT_MAP	miniterm.py	/^    REPLACEMENT_MAP = dict((x, 0x2400 + x) for x in range(32))$/;"	v	class:NoControls
+TILES_HEIGHT	mp_tile.py	/^TILES_HEIGHT = 256$/;"	v
+TILES_WIDTH	mp_tile.py	/^TILES_WIDTH = 256$/;"	v
+TILE_SERVICES	mp_tile.py	/^TILE_SERVICES = {$/;"	v
+TRANSFORMATIONS	miniterm.py	/^TRANSFORMATIONS = {$/;"	v
+TileException	mp_tile.py	/^class TileException(Exception):$/;"	c
+TileInfo	mp_tile.py	/^class TileInfo:$/;"	c
+TileInfoScaled	mp_tile.py	/^class TileInfoScaled(TileInfo):$/;"	c
+TileServiceInfo	mp_tile.py	/^class TileServiceInfo:$/;"	c
+TopMenu	MAVExplorer.py	/^TopMenu = None$/;"	v
+Totals	mavsummarize.py	/^class Totals(object):$/;"	c
+Transform	miniterm.py	/^class Transform(object):$/;"	c
+__del__	miniterm.py	/^        def __del__(self):$/;"	m	class:.Console	file:
+__enter__	miniterm.py	/^    def __enter__(self):$/;"	m	class:ConsoleBase	file:
+__exit__	miniterm.py	/^    def __exit__(self, *args, **kwargs):$/;"	m	class:ConsoleBase	file:
+__getitem__	mp_tile.py	/^    def __getitem__(self, a):$/;"	m	class:TileServiceInfo	file:
+__init__	MAVExplorer.py	/^    def __init__(self):$/;"	m	class:MEState
+__init__	MAVExplorer.py	/^    def __init__(self):$/;"	m	class:MEStatus
+__init__	magfit_gps.py	/^    def __init__(self, x, y, z):$/;"	m	class:vec3
+__init__	mavfft_isb.py	/^        def __init__(self, ffth):$/;"	m	class:mavfft_fttd.PlotData
+__init__	mavflightview.py	/^    def __init__(self):$/;"	m	class:mavflightview_options
+__init__	mavplayback.py	/^    def __init__(self, filename):$/;"	m	class:App
+__init__	mavproxy.py	/^    def __init__(self):$/;"	m	class:MAVFunctions
+__init__	mavproxy.py	/^    def __init__(self):$/;"	m	class:MPState
+__init__	mavproxy.py	/^    def __init__(self):$/;"	m	class:MPStatus
+__init__	mavsummarize.py	/^    def __init__(self):$/;"	m	class:Totals
+__init__	miniterm.py	/^        def __init__(self):$/;"	m	class:.Console
+__init__	miniterm.py	/^        def __init__(self, fd):$/;"	m	class:.Out
+__init__	miniterm.py	/^    def __init__(self):$/;"	m	class:Colorize
+__init__	miniterm.py	/^    def __init__(self):$/;"	m	class:ConsoleBase
+__init__	miniterm.py	/^    def __init__(self, serial_instance, echo=False, eol='crlf', filters=()):$/;"	m	class:Miniterm
+__init__	mp_slipmap.py	/^    def __init__(self,$/;"	m	class:MPSlipMap
+__init__	mp_tile.py	/^    def __init__(self, cache_path=None, download=True, cache_size=500,$/;"	m	class:MPTile
+__init__	mp_tile.py	/^    def __init__(self, msg):$/;"	m	class:TileException
+__init__	mp_tile.py	/^    def __init__(self, tile, zoom, scale, src, dst, service):$/;"	m	class:TileInfoScaled
+__init__	mp_tile.py	/^    def __init__(self, tile, zoom, service, offset=(0,0)):$/;"	m	class:TileInfo
+__init__	mp_tile.py	/^    def __init__(self, x, y, zoom):$/;"	m	class:TileServiceInfo
+__str__	magfit_gps.py	/^    def __str__(self):$/;"	m	class:vec3	file:
+__str__	mavfft_isb.py	/^        def __str__(self):$/;"	m	class:mavfft_fttd.PlotData	file:
+_cdsitepackages_complete	virtualenvwrapper.sh	/^        _cdsitepackages_complete () {$/;"	f
+_cdvirtualenv_complete	virtualenvwrapper.sh	/^        _cdvirtualenv_complete () {$/;"	f
+_lsvirtualenv_usage	virtualenvwrapper.sh	/^function _lsvirtualenv_usage {$/;"	f
+_start_reader	miniterm.py	/^    def _start_reader(self):$/;"	m	class:Miniterm
+_stop_reader	miniterm.py	/^    def _stop_reader(self):$/;"	m	class:Miniterm
+_virtualenvs	virtualenvwrapper.sh	/^        _virtualenvs () {$/;"	f
+action	mavkml.py	/^                      action='store_true',$/;"	v
+action	mavproxy.py	/^        action='append',$/;"	v
+add2virtualenv	virtualenvwrapper.sh	/^function add2virtualenv {$/;"	f
+add_callback	mp_slipmap.py	/^    def add_callback(self, callback):$/;"	m	class:MPSlipMap
+add_data	mavgraph.py	/^def add_data(t, msg, vars, flightmode):$/;"	f
+add_data	mavkml.py	/^def add_data(t, msg, msg_types, vars, fields, field_types, position_field_type):$/;"	f
+add_fftd	mavfft_isb.py	/^        def add_fftd(self, fftd):$/;"	m	class:mavfft_fttd.PlotData
+add_footer	mavtogpx.py	/^    def add_footer():$/;"	f
+add_header	mavtogpx.py	/^    def add_header():$/;"	f	function:mav_to_gpx
+add_input	mavproxy.py	/^def add_input(cmd, immediate=False):$/;"	f
+add_object	mp_slipmap.py	/^    def add_object(self, obj):$/;"	m	class:MPSlipMap
+add_to_linestring	mavkml.py	/^def add_to_linestring(position_data, kml_linestring):$/;"	f
+allvirtualenv	virtualenvwrapper.sh	/^function allvirtualenv {$/;"	f
+app	mavplayback.py	/^app=App(filename)$/;"	v
+arcname	MPU6KSearch.py	/^        arcname = "%s-%s" % (time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(mtime)), arcname)$/;"	v
+arcname	MPU6KSearch.py	/^    arcname=os.path.basename(f)$/;"	v
+area_to_image	mp_tile.py	/^    def area_to_image(self, lat, lon, width, height, ground_width, zoom=None, ordered=True):$/;"	m	class:MPTile
+area_to_tile_list	mp_tile.py	/^    def area_to_tile_list(self, lat, lon, width, height, ground_width, zoom=None):$/;"	m	class:MPTile
+args	magfit.py	/^args = parser.parse_args()$/;"	v
+args	magfit_delta.py	/^args = parser.parse_args()$/;"	v
+args	magfit_gps.py	/^args = parser.parse_args()$/;"	v
+args	magfit_motors.py	/^args = parser.parse_args()$/;"	v
+args	mavextract.py	/^args = parser.parse_args()$/;"	v
+args	mavfft.py	/^args = parser.parse_args()$/;"	v
+args	mavfft_isb.py	/^args = parser.parse_args()$/;"	v
+args	mavflightmodes.py	/^args = parser.parse_args()$/;"	v
+args	mavflighttime.py	/^args = parser.parse_args()$/;"	v
+args	mavgen.py	/^args = parser.parse_args()$/;"	v
+args	mavgpslock.py	/^args = parser.parse_args()$/;"	v
+args	mavgraph.py	/^args = parser.parse_args()$/;"	v
+args	mavkml.py	/^    args = parser.parse_args()$/;"	v
+args	mavlogdump.py	/^args = parser.parse_args()$/;"	v
+args	mavloss.py	/^args = parser.parse_args()$/;"	v
+args	mavmission.py	/^args = parser.parse_args()$/;"	v
+args	mavparmdiff.py	/^args = parser.parse_args()$/;"	v
+args	mavparms.py	/^args = parser.parse_args()$/;"	v
+args	mavplayback.py	/^args = parser.parse_args()$/;"	v
+args	mavsearch.py	/^args = parser.parse_args()$/;"	v
+args	mavsigloss.py	/^args = parser.parse_args()$/;"	v
+args	mavsummarize.py	/^args = parser.parse_args()$/;"	v
+args	mavtogpx.py	/^args = parser.parse_args()$/;"	v
+args	mavtomfile.py	/^args = parser.parse_args()$/;"	v
+ask_for_port	miniterm.py	/^def ask_for_port():$/;"	f
+available_types	mavlogdump.py	/^available_types = set()$/;"	v
+axes	mavgraph.py	/^axes = []$/;"	v
+boundary	mp_tile.py	/^        boundary = mp_util.polygon_load(opts.boundary)$/;"	v
+bounds	mp_tile.py	/^        bounds = mp_util.polygon_bounds(boundary)$/;"	v
+button	mavplayback.py	/^    def button(self, name, filename, command):$/;"	m	class:App
+cancel	miniterm.py	/^        def cancel(self):$/;"	m	class:.Console
+cancel	miniterm.py	/^    def cancel(self):$/;"	m	class:ConsoleBase
+caps	mavgraph.py	/^    caps = set(re.findall(re_caps, f))$/;"	v
+cdproject	virtualenvwrapper.sh	/^function cdproject {$/;"	f
+cdsitepackages	virtualenvwrapper.sh	/^function cdsitepackages {$/;"	f
+cdvirtualenv	virtualenvwrapper.sh	/^function cdvirtualenv {$/;"	f
+change_baudrate	miniterm.py	/^    def change_baudrate(self):$/;"	m	class:Miniterm
+change_encoding	miniterm.py	/^    def change_encoding(self):$/;"	m	class:Miniterm
+change_filter	miniterm.py	/^    def change_filter(self):$/;"	m	class:Miniterm
+change_port	miniterm.py	/^    def change_port(self):$/;"	m	class:Miniterm
+check_events	mp_slipmap.py	/^    def check_events(self):$/;"	m	class:MPSlipMap
+check_link_status	mavproxy.py	/^def check_link_status():$/;"	f
+child_task	mp_slipmap.py	/^    def child_task(self):$/;"	m	class:MPSlipMap
+cleanup	miniterm.py	/^        def cleanup(self):$/;"	m	class:.Console
+cleanup	miniterm.py	/^    def cleanup(self):$/;"	m	class:ConsoleBase
+clear_zipimport_cache	mavproxy.py	/^def clear_zipimport_cache():$/;"	f
+close	miniterm.py	/^    def close(self):$/;"	m	class:Miniterm
+close	mp_slipmap.py	/^    def close(self):$/;"	m	class:MPSlipMap
+cmd_alias	mavproxy.py	/^def cmd_alias(args):$/;"	f
+cmd_condition	MAVExplorer.py	/^def cmd_condition(args):$/;"	f
+cmd_devid	MAVExplorer.py	/^def cmd_devid(args):$/;"	f
+cmd_fft	MAVExplorer.py	/^def cmd_fft(args):$/;"	f
+cmd_graph	MAVExplorer.py	/^def cmd_graph(args):$/;"	f
+cmd_loadfile	MAVExplorer.py	/^def cmd_loadfile(args):$/;"	f
+cmd_map	MAVExplorer.py	/^def cmd_map(args):$/;"	f
+cmd_messages	MAVExplorer.py	/^def cmd_messages(args):$/;"	f
+cmd_module	mavproxy.py	/^def cmd_module(args):$/;"	f
+cmd_param	MAVExplorer.py	/^def cmd_param(args):$/;"	f
+cmd_reload	MAVExplorer.py	/^def cmd_reload(args):$/;"	f
+cmd_reset	mavproxy.py	/^def cmd_reset(args):$/;"	f
+cmd_save	MAVExplorer.py	/^def cmd_save(args):$/;"	f
+cmd_script	mavproxy.py	/^def cmd_script(args):$/;"	f
+cmd_set	MAVExplorer.py	/^def cmd_set(args):$/;"	f
+cmd_set	mavproxy.py	/^def cmd_set(args):$/;"	f
+cmd_setup	mavproxy.py	/^def cmd_setup(args):$/;"	f
+cmd_status	mavproxy.py	/^def cmd_status(args):$/;"	f
+cmd_watch	mavproxy.py	/^def cmd_watch(args):$/;"	f
+col	mavgraph.py	/^        col = colors[:]$/;"	v
+col	mavgraph.py	/^        col = colors[fi*len(fields):]$/;"	v
+colors	mavgraph.py	/^colors = [ 'red', 'green', 'blue', 'orange', 'olive', 'black', 'grey', 'yellow', 'brown', 'darkcyan', 'cornflowerblue', 'darkmagenta', 'deeppink', 'darkred']$/;"	v
+colors	mavkml.py	/^colors = [simplekml.Color.red, simplekml.Color.green, simplekml.Color.blue,$/;"	v
+colour_expression_exceptions	mavflightview.py	/^colour_expression_exceptions = dict()$/;"	v
+colour_for_flightmode	mavflightview.py	/^def colour_for_flightmode(mav_type, fmode, instance=0):$/;"	f
+colour_for_point	mavflightview.py	/^def colour_for_point(mlog, point, instance, options):$/;"	f
+colour_for_point_flightmode	mavflightview.py	/^def colour_for_point_flightmode(mlog, point, instance, options):$/;"	f
+colour_map_copter	mavflightview.py	/^colour_map_copter = {}$/;"	v
+colour_map_plane	mavflightview.py	/^colour_map_plane = {}$/;"	v
+colour_map_rover	mavflightview.py	/^colour_map_rover = {}$/;"	v
+colour_map_submarine	mavflightview.py	/^colour_map_submarine = {}$/;"	v
+colour_map_tracker	mavflightview.py	/^colour_map_tracker = {}$/;"	v
+colour_source_max	mavflightview.py	/^colour_source_max = 0$/;"	v
+colour_source_min	mavflightview.py	/^colour_source_min = 255$/;"	v
+colourmap	mavgraph.py	/^colourmap = {$/;"	v
+colourmap_check_done	mavflightview.py	/^colourmap_check_done = False$/;"	v
+colourmap_for_mav_type	mavflightview.py	/^def colourmap_for_mav_type(mav_type):$/;"	f
+command_map	MAVExplorer.py	/^command_map = {$/;"	v
+command_map	mavproxy.py	/^command_map = {$/;"	v
+coord	mp_tile.py	/^    def coord(self, offset=(0,0)):$/;"	m	class:TileInfo
+coord_from_area	mp_tile.py	/^    def coord_from_area(self, x, y, lat, lon, width, ground_width):$/;"	m	class:MPTile
+coord_to_pixel	mp_tile.py	/^    def coord_to_pixel(self, lat, lon, width, ground_width, lat2, lon2):$/;"	m	class:MPTile
+coord_to_tile	mp_tile.py	/^    def coord_to_tile(self, lat, lon, zoom):$/;"	m	class:MPTile
+coord_to_tilepath	mp_tile.py	/^    def coord_to_tilepath(self, lat, lon, zoom):$/;"	m	class:MPTile
+count	mavtogpx.py	/^    count=0$/;"	v
+cpvirtualenv	virtualenvwrapper.sh	/^function cpvirtualenv {$/;"	f
+create_imagefile	mavflightview.py	/^def create_imagefile(options, filename, latlon, ground_width, path_objs, mission_obj, fence_obj, width=400, height=400, used_flightmodes=[], mav_type=None):$/;"	f
+create_map	mavflightview.py	/^def create_map(title):$/;"	f
+csv_out	mavlogdump.py	/^                csv_out = [str(data[y.split('.')[-1]]) if y.split('.')[0] == type and y.split('.')[-1] in data else "" for y in fields]$/;"	v
+csv_out	mavlogdump.py	/^                csv_out = [str(data[y]) if y != "timestamp" else "" for y in fields]$/;"	v
+csv_out	mavlogdump.py	/^            csv_out = ["" for x in fields]$/;"	v
+data	mavlogdump.py	/^        data = m.to_dict()$/;"	v
+default	mavproxy.py	/^                      default='mav.tlog')$/;"	v
+default	mavproxy.py	/^                      default=[])$/;"	v
+default	mavproxy.py	/^        default=[],$/;"	v
+dialect	mavlogdump.py	/^                                  dialect=args.dialect,$/;"	v
+directories	MPU6KSearch.py	/^    directories = search_dirs$/;"	v
+directories	MPU6KSearch.py	/^directories = sys.argv[1:]$/;"	v
+display_waypoints	mavflightview.py	/^def display_waypoints(wploader, map):$/;"	f
+distance	mp_tile.py	/^    def distance(self, lat, lon):$/;"	m	class:TileInfo
+downloader	mp_tile.py	/^    def downloader(self):$/;"	m	class:MPTile
+dump_port_settings	miniterm.py	/^    def dump_port_settings(self):$/;"	m	class:Miniterm
+echo	miniterm.py	/^    def echo(self, text):$/;"	m	class:Colorize
+echo	miniterm.py	/^    def echo(self, text):$/;"	m	class:Transform
+echo	miniterm.py	/^    echo = rx$/;"	v	class:NoTerminal
+echo	miniterm.py	/^    echo = rx$/;"	v	class:Printable
+edge_colour	mavgraph.py	/^edge_colour = (0.1, 0.1, 0.1)$/;"	v
+email	MPU6KSearch.py	/^email = 'Craig Elder <craig@3drobotics.com>'$/;"	v
+event_count	mp_slipmap.py	/^    def event_count(self):$/;"	m	class:MPSlipMap
+expression_ok	MAVExplorer.py	/^def expression_ok(expression, msgs=None):$/;"	f
+ext	mavlogdump.py	/^ext = os.path.splitext(filename)[1]$/;"	v
+extensions	MPU6KSearch.py	/^extensions = ['.tlog','.bin']$/;"	v
+f	MPU6KSearch.py	/^    f = filelist[i]$/;"	v
+f	mavgraph.py	/^    f = filenames[fi]$/;"	v
+f	mavkml.py	/^        f = filenames[fi]$/;"	v
+f	mavproxy.py	/^            f = open(start_script, 'r')$/;"	v
+f_out	mavgraph.py	/^        f_out = open(args.output, 'w')$/;"	v
+fatalsignals	mavproxy.py	/^    fatalsignals = [signal.SIGTERM]$/;"	v
+fft	mavfft.py	/^def fft(logfile):$/;"	f
+field_types	mavgraph.py	/^field_types = []$/;"	v
+fields	mavgraph.py	/^fields = []$/;"	v
+fields	mavlogdump.py	/^fields = ['timestamp']$/;"	v
+fig	mavgraph.py	/^    fig = plotit(x, y, lab, colors=col)$/;"	v
+file1	mavparmdiff.py	/^file1 = args.file1$/;"	v
+file2	mavparmdiff.py	/^file2 = args.file2$/;"	v
+filelist	MPU6KSearch.py	/^filelist = []$/;"	v
+filename	mavlogdump.py	/^filename = args.log$/;"	v
+filename	mavplayback.py	/^filename = args.log$/;"	v
+filenames	mavgraph.py	/^filenames = []$/;"	v
+filenames	mavkml.py	/^    filenames = []$/;"	v
+find_message	mavplayback.py	/^    def find_message(self):$/;"	m	class:App
+find_offsets	magfit_delta.py	/^def find_offsets(data, ofs):$/;"	f
+first_only	mavgraph.py	/^first_only = []$/;"	v
+fit_data	magfit.py	/^def fit_data(data):$/;"	f
+fit_data	magfit_gps.py	/^def fit_data(data):$/;"	f
+fit_data	magfit_motors.py	/^def fit_data(data):$/;"	f
+fix	mavtogpx.py	/^    fix=0$/;"	v
+flight_modes	mavflightmodes.py	/^def flight_modes(logfile):$/;"	f
+flight_time	mavflighttime.py	/^def flight_time(logfile):$/;"	f
+flightmode_colours	MAVExplorer.py	/^def flightmode_colours():$/;"	f
+flightmode_menu	MAVExplorer.py	/^def flightmode_menu():$/;"	f
+flightmodes	MAVExplorer.py	/^flightmodes = None$/;"	v
+flush	miniterm.py	/^        def flush(self):$/;"	m	class:.Out
+forward	mavplayback.py	/^    def forward(self):$/;"	m	class:App
+found	MPU6KSearch.py	/^found = []$/;"	v
+generate_kwargs	mavproxy.py	/^def generate_kwargs(args):$/;"	f
+get_event	mp_slipmap.py	/^    def get_event(self):$/;"	m	class:MPSlipMap
+get_help_text	miniterm.py	/^    def get_help_text(self):$/;"	m	class:Miniterm
+get_mav_param	mavproxy.py	/^def get_mav_param(param, default=None):$/;"	f
+get_service	mp_tile.py	/^    def get_service(self):$/;"	m	class:MPTile
+get_service_list	mp_tile.py	/^    def get_service_list(self):$/;"	m	class:MPTile
+getkey	miniterm.py	/^        def getkey(self):$/;"	m	class:.Console
+getkey	miniterm.py	/^    def getkey(self):$/;"	m	class:ConsoleBase
+graph_menus	MAVExplorer.py	/^def graph_menus():$/;"	f
+ground_width	mp_tile.py	/^        ground_width = max(mp_util.gps_distance(lat, lon, lat, lon+bounds[3]),$/;"	v
+ground_width	mp_tile.py	/^    ground_width = opts.width$/;"	v
+grui	MAVExplorer.py	/^grui = []$/;"	v
+handle_menu_key	miniterm.py	/^    def handle_menu_key(self, c):$/;"	m	class:Miniterm
+have_graph	MAVExplorer.py	/^def have_graph(name):$/;"	f
+heading_error	magfit_gps.py	/^def heading_error(parm, data):$/;"	f
+heading_error1	magfit_gps.py	/^def heading_error1(parm, data):$/;"	f
+heartbeat_check_period	mavproxy.py	/^    heartbeat_check_period = mavutil.periodic_event(0.33)$/;"	v
+heartbeat_period	mavproxy.py	/^    heartbeat_period = mavutil.periodic_event(1)$/;"	v
+help	mavkml.py	/^                      help="Altitude offset for paths that go through the"$/;"	v
+help	mavkml.py	/^                      help="Extrude paths to ground [default: %(default)s]")$/;"	v
+help	mavkml.py	/^                      help="Output filename [default: %(default)s] ")$/;"	v
+help	mavkml.py	/^                      help="Select position data source"$/;"	v
+help	mavkml.py	/^                      help="select packets by a condition [default: %(default)s]")$/;"	v
+help	mavplayback.py	/^                  help="flightgear FDM NET output (IP:port)")$/;"	v
+help	mavproxy.py	/^                      help="MAVLink stream rate")$/;"	v
+help	mavproxy.py	/^        help='Load the specified module. Can be used multiple times, or with a comma separated list')$/;"	v
+hide_object	mp_slipmap.py	/^    def hide_object(self, key, hide=True):$/;"	m	class:MPSlipMap
+highest_x	mavgraph.py	/^highest_x = None$/;"	v
+html	mavgraph.py	/^        html = mpld3.fig_to_html(fig)$/;"	v
+i	mavflightview.py	/^            i = 0$/;"	v
+i	mavflightview.py	/^    i=0$/;"	v
+icon	mp_slipmap.py	/^    def icon(self, filename):$/;"	m	class:MPSlipMap
+import_package	mavproxy.py	/^def import_package(name):$/;"	f
+input	mavgraph.py	/^    input = raw_input$/;"	v
+input_loop	MAVExplorer.py	/^def input_loop():$/;"	f
+input_loop	mavproxy.py	/^def input_loop():$/;"	f
+is_alive	mp_slipmap.py	/^    def is_alive(self):$/;"	m	class:MPSlipMap
+isbin	mavlogdump.py	/^isbin = ext in ['.bin', '.BIN', '.px4log']$/;"	v
+islog	mavlogdump.py	/^islog = ext in ['.log', '.LOG'] # NOTE: "islog" does not mean a tlog$/;"	v
+istlog	mavlogdump.py	/^istlog = ext in ['.tlog', '.TLOG']$/;"	v
+join	miniterm.py	/^    def join(self, transmit_only=False):$/;"	m	class:Miniterm
+key	mp_tile.py	/^    def key(self):$/;"	m	class:TileInfo
+key_description	miniterm.py	/^def key_description(character):$/;"	f
+keys	mavparms.py	/^    keys = list(parms.keys())$/;"	v
+kml	mavkml.py	/^kml = simplekml.Kml()$/;"	v
+kml_linestrings	mavkml.py	/^kml_linestrings = []$/;"	v
+lab	mavgraph.py	/^        lab = fields[:]$/;"	v
+lab	mavgraph.py	/^        lab = labels[fi*len(fields):(fi+1)*len(fields)]$/;"	v
+labels	mavgraph.py	/^    labels = None$/;"	v
+labels	mavgraph.py	/^    labels = args.labels.split(',')$/;"	v
+last_timestamp	mavlogdump.py	/^    last_timestamp = timestamp$/;"	v
+last_timestamp	mavlogdump.py	/^last_timestamp = None$/;"	v
+last_xlim	MAVExplorer.py	/^last_xlim = None$/;"	v
+lat	mavtogpx.py	/^    lat=0$/;"	v
+lat	mp_tile.py	/^        lat = bounds[0]+bounds[2]$/;"	v
+lat	mp_tile.py	/^    lat = opts.lat$/;"	v
+load_graph_xml	MAVExplorer.py	/^def load_graph_xml(xml, filename, load_all=False):$/;"	f
+load_graphs	MAVExplorer.py	/^def load_graphs():$/;"	f
+load_module	mavproxy.py	/^def load_module(modname, quiet=False, **kwargs):$/;"	f
+load_tile	mp_tile.py	/^    def load_tile(self, tile):$/;"	m	class:MPTile
+load_tile_lowres	mp_tile.py	/^    def load_tile_lowres(self, tile):$/;"	m	class:MPTile
+loadfile	MAVExplorer.py	/^def loadfile(args):$/;"	f
+lock_time	mavgpslock.py	/^def lock_time(logfile):$/;"	f
+log_paths	mavproxy.py	/^def log_paths():$/;"	f
+log_writer	mavproxy.py	/^def log_writer():$/;"	f
+lon	mavtogpx.py	/^    lon=0$/;"	v
+lon	mp_tile.py	/^        lon = bounds[1]$/;"	v
+lon	mp_tile.py	/^    lon = opts.lon$/;"	v
+lowest_x	mavgraph.py	/^lowest_x = None$/;"	v
+lssitepackages	virtualenvwrapper.sh	/^function lssitepackages {$/;"	f
+lsvirtualenv	virtualenvwrapper.sh	/^function lsvirtualenv {$/;"	f
+m	mavfft_isb.py	/^        m = mlog.recv_match(condition=args.condition)$/;"	v	class:mavfft_fttd.PlotData
+m	mavlogdump.py	/^    m = mlog.recv_match(blocking=args.follow, type=match_types)$/;"	v
+magfit	magfit.py	/^def magfit(logfile):$/;"	f
+magfit	magfit_delta.py	/^def magfit(logfile):$/;"	f
+magfit	magfit_gps.py	/^def magfit(logfile):$/;"	f
+magfit	magfit_motors.py	/^def magfit(logfile):$/;"	f
+main	miniterm.py	/^def main(default_port=None, default_baudrate=9600, default_rts=None, default_dtr=None):$/;"	f
+main_loop	MAVExplorer.py	/^def main_loop():$/;"	f
+main_loop	mavproxy.py	/^def main_loop():$/;"	f
+mainstate_field	mavkml.py	/^mainstate_field = 'STAT.MainState'$/;"	v
+map_colours	mavflightview.py	/^map_colours = [ (255,   0,   0),$/;"	v
+master	mavproxy.py	/^    def master(self):$/;"	m	class:MPState
+match_extension	MPU6KSearch.py	/^def match_extension(f):$/;"	f
+match_type	mavlogdump.py	/^def match_type(mtype, patterns):$/;"	f
+match_types	mavlogdump.py	/^                match_types = []$/;"	v
+match_types	mavlogdump.py	/^match_types=None$/;"	v
+mav_param	mavproxy.py	/^    def mav_param(self):$/;"	m	class:MPState
+mav_to_gpx	mavtogpx.py	/^def mav_to_gpx(infilename, outfilename):$/;"	f
+mavfft_fttd	mavfft_isb.py	/^def mavfft_fttd(logfile):$/;"	f
+mavflightview	mavflightview.py	/^def mavflightview(filename, options):$/;"	f
+mavflightview_mav	mavflightview.py	/^def mavflightview_mav(mlog, options=None, flightmode_selections=[]):$/;"	f
+mavflightview_options	mavflightview.py	/^class mavflightview_options(object):$/;"	c
+mavflightview_show	mavflightview.py	/^def mavflightview_show(path, wp, fen, used_flightmodes, mav_type, options, title=None):$/;"	f
+mavloss	mavloss.py	/^def mavloss(logfile):$/;"	f
+mavmission	mavmission.py	/^def mavmission(logfile):$/;"	f
+mavparms	mavparms.py	/^def mavparms(logfile):$/;"	f
+mavsearch	mavsearch.py	/^def mavsearch(filename):$/;"	f
+mavversion	mavproxy.py	/^mavversion = None$/;"	v
+menu_callback	MAVExplorer.py	/^def menu_callback(m):$/;"	f
+meta	mavlogdump.py	/^        meta = {"type": m.get_type(), "timestamp": timestamp}$/;"	v
+mkdir_p	mavproxy.py	/^def mkdir_p(dir):$/;"	f
+mkproject	virtualenvwrapper.sh	/^function mkproject {$/;"	f
+mktmpenv	virtualenvwrapper.sh	/^function mktmpenv {$/;"	f
+mkvirtualenv	virtualenvwrapper.sh	/^function mkvirtualenv {$/;"	f
+mlog	mavlogdump.py	/^mlog = mavutil.mavlink_connection(filename, planner_format=args.planner,$/;"	v
+modes	mavgraph.py	/^modes = []$/;"	v
+module	mavproxy.py	/^    def module(self, name):$/;"	m	class:MPState
+mp_icon	mp_tile.py	/^def mp_icon(filename):$/;"	f
+mpstate	mavproxy.py	/^    mpstate = MPState()$/;"	v
+msg_period	mavproxy.py	/^    msg_period = mavutil.periodic_event(1.0\/15)$/;"	v
+msg_type	mavfft_isb.py	/^        msg_type = m.get_type()$/;"	v	class:mavfft_fttd.PlotData
+msg_types	mavgraph.py	/^    msg_types = msg_types.union(caps)$/;"	v
+msg_types	mavgraph.py	/^msg_types = set()$/;"	v
+mt	mp_tile.py	/^    mt = MPTile(debug=opts.debug, service=opts.service,$/;"	v
+mtime	MPU6KSearch.py	/^        mtime = os.path.getmtime(f)$/;"	v
+multiplier	mavgraph.py	/^multiplier = []$/;"	v
+newData	mavlogdump.py	/^                newData = [str(data[y.split('.')[-1]]) if y.split('.')[0] == type and y.split('.')[-1] in data else "" for y in fields]$/;"	v
+newData	mavlogdump.py	/^                newData = [str(data[y]) if y != "timestamp" else "" for y in fields]$/;"	v
+next_message	mavplayback.py	/^    def next_message(self):$/;"	m	class:App
+noise	magfit.py	/^def noise():$/;"	f
+noise	magfit_delta.py	/^def noise():$/;"	f
+noise	magfit_motors.py	/^def noise():$/;"	f
+notimestamps	mavlogdump.py	/^                                  notimestamps=args.notimestamps,$/;"	v
+nottypes	mavlogdump.py	/^    nottypes = nottypes.split(',')$/;"	v
+nottypes	mavlogdump.py	/^nottypes = args.nottypes$/;"	v
+offsets	mavlogdump.py	/^offsets = {}$/;"	v
+older_message	mavextract.py	/^def older_message(m, lastm):$/;"	f
+open_telemetry_logs	mavproxy.py	/^def open_telemetry_logs(logpath_telem, logpath_telem_raw):$/;"	f
+outMsg	mavlogdump.py	/^        outMsg = {"meta": meta, "data": data}$/;"	v
+outfilename	mavtogpx.py	/^    outfilename = infilename + '.gpx'$/;"	v
+output	mavlogdump.py	/^    output = open(args.output, mode='wb')$/;"	v
+output	mavlogdump.py	/^output = None$/;"	v
+p1	mavparmdiff.py	/^p1 = mavparm.MAVParmDict()$/;"	v
+p2	mavparmdiff.py	/^p2 = mavparm.MAVParmDict()$/;"	v
+param_set	mavproxy.py	/^def param_set(name, value, retries=3):$/;"	f
+parms	mavmission.py	/^parms = {}$/;"	v
+parms	mavparms.py	/^parms = {}$/;"	v
+parser	magfit.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	magfit_delta.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	magfit_gps.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	magfit_motors.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavextract.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavfft.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavfft_isb.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavflightmodes.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavflighttime.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavflightview.py	/^    parser = OptionParser("mavflightview.py [options]")$/;"	v
+parser	mavgen.py	/^parser = ArgumentParser(description="This tool generate implementations from MAVLink message definitions")$/;"	v
+parser	mavgpslock.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavgraph.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavkml.py	/^    parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavlogdump.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavloss.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavmission.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavparmdiff.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavparms.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavplayback.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavproxy.py	/^    parser = OptionParser("mavproxy.py [options]")$/;"	v
+parser	mavsearch.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavsigloss.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavsummarize.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavtogpx.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mavtomfile.py	/^parser = ArgumentParser(description=__doc__)$/;"	v
+parser	mp_slipmap.py	/^    parser = OptionParser("mp_slipmap.py [options]")$/;"	v
+parser	mp_tile.py	/^    parser = OptionParser("mp_tile.py [options]")$/;"	v
+path	mp_tile.py	/^    def path(self):$/;"	m	class:TileInfo
+pause	mavplayback.py	/^    def pause(self):$/;"	m	class:App
+periodic_tasks	mavproxy.py	/^def periodic_tasks():$/;"	f
+pipeRecvConsole	MAVExplorer.py	/^    def pipeRecvConsole(self):$/;"	m	class:MEState
+pipeRecvGraph	MAVExplorer.py	/^    def pipeRecvGraph(self):$/;"	m	class:MEState
+pixel_coords	mavflightview.py	/^def pixel_coords(latlon, ground_width=0, mt=None, topleft=None, width=None):$/;"	f
+plot_data	magfit.py	/^def plot_data(orig_data, data):$/;"	f
+plotit	mavgraph.py	/^def plotit(x, y, fields, colors=[]):$/;"	f
+position_field_types	mavkml.py	/^position_field_types = [  # Order must be lon, lat, alt to match KML$/;"	v
+prefix	mavfft_isb.py	/^        def prefix(self):$/;"	m	class:mavfft_fttd.PlotData
+print_summary	mavsummarize.py	/^    def print_summary(self):$/;"	m	class:Totals
+process	mavextract.py	/^def process(filename):$/;"	f
+process_file	mavgraph.py	/^def process_file(filename, timeshift):$/;"	f
+process_file	mavkml.py	/^def process_file(filename, source):$/;"	f
+process_master	mavproxy.py	/^def process_master(m):$/;"	f
+process_mavlink	mavproxy.py	/^def process_mavlink(slave):$/;"	f
+process_packet	mavtogpx.py	/^    def process_packet(timestamp, lat, lon, alt, hdg, v):$/;"	f	function:mav_to_gpx
+process_stdin	MAVExplorer.py	/^def process_stdin(line):$/;"	f
+process_stdin	mavproxy.py	/^def process_stdin(line):$/;"	f
+process_tlog	mavtomfile.py	/^def process_tlog(filename):$/;"	f
+progress_bar	MAVExplorer.py	/^def progress_bar(pct):$/;"	f
+quit_handler	mavproxy.py	/^    def quit_handler(signum = None, frame = None):$/;"	f
+radius	magfit.py	/^def radius(mag, offsets):$/;"	f
+radius	magfit_motors.py	/^def radius(d, offsets, motor_ofs):$/;"	f
+radius_cmp	magfit.py	/^def radius_cmp(a, b, offsets):$/;"	f
+radius_cmp	magfit_motors.py	/^def radius_cmp(a, b, offsets, motor_ofs):$/;"	f
+raw_input	miniterm.py	/^    raw_input = input   # in python3 it's "raw"$/;"	v
+re_caps	mavgraph.py	/^re_caps = re.compile('[A-Z_][A-Z0-9_]+')$/;"	v
+reader	miniterm.py	/^    def reader(self):$/;"	m	class:Miniterm
+refresh_time	mp_tile.py	/^    def refresh_time(self):$/;"	m	class:TileInfo
+remove_object	mp_slipmap.py	/^    def remove_object(self, key):$/;"	m	class:MPSlipMap
+results	MPU6KSearch.py	/^results = 'SearchResults.zip'$/;"	v
+rewind	mavplayback.py	/^    def rewind(self):$/;"	m	class:App
+rmvirtualenv	virtualenvwrapper.sh	/^function rmvirtualenv {$/;"	f
+robust_parsing	mavlogdump.py	/^                                  robust_parsing=args.robust,$/;"	v
+run_script	mavproxy.py	/^def run_script(scriptfile):$/;"	f
+rx	miniterm.py	/^    def rx(self, text):$/;"	m	class:CR
+rx	miniterm.py	/^    def rx(self, text):$/;"	m	class:Colorize
+rx	miniterm.py	/^    def rx(self, text):$/;"	m	class:DebugIO
+rx	miniterm.py	/^    def rx(self, text):$/;"	m	class:NoTerminal
+rx	miniterm.py	/^    def rx(self, text):$/;"	m	class:Printable
+rx	miniterm.py	/^    def rx(self, text):$/;"	m	class:Transform
+s	mavlogdump.py	/^        s = "%s.%02u: %s" % (time.strftime("%Y-%m-%d %H:%M:%S",$/;"	v
+save_callback	MAVExplorer.py	/^def save_callback(operation, graphdef):$/;"	f
+save_graph	MAVExplorer.py	/^def save_graph(graphdef):$/;"	f
+save_kml	mavkml.py	/^def save_kml(filename):$/;"	f
+save_process	MAVExplorer.py	/^def save_process(MAVExpLastGraph, child_pipe_console_input, child_pipe_graph_input, statusMsgs):$/;"	f
+say	mavproxy.py	/^def say(text, priority='important'):$/;"	f
+say_text	mavproxy.py	/^def say_text(text, priority='important'):$/;"	f
+scaled_tile	mp_tile.py	/^    def scaled_tile(self, tile):$/;"	m	class:MPTile
+search_dirs	MPU6KSearch.py	/^search_dirs = ['c:\\Program Files\\APM Planner',$/;"	v
+select_data	magfit.py	/^def select_data(data):$/;"	f
+select_data	magfit_motors.py	/^def select_data(data):$/;"	f
+send_heartbeat	mavproxy.py	/^def send_heartbeat(master):$/;"	f
+serial_list	mavproxy.py	/^    serial_list = mavutil.auto_detect_serial(preferred_list=preferred_ports)$/;"	v
+set_center	mp_slipmap.py	/^    def set_center(self, lat, lon):$/;"	m	class:MPSlipMap
+set_download	mp_tile.py	/^    def set_download(self, download):$/;"	m	class:MPTile
+set_follow	mp_slipmap.py	/^    def set_follow(self, enable):$/;"	m	class:MPSlipMap
+set_follow_object	mp_slipmap.py	/^    def set_follow_object(self, key, enable):$/;"	m	class:MPSlipMap
+set_layout	mp_slipmap.py	/^    def set_layout(self, layout):$/;"	m	class:MPSlipMap
+set_mav_version	mavproxy.py	/^def set_mav_version(mav10, mav20, autoProtocol, mavversionArg):$/;"	f
+set_position	mp_slipmap.py	/^    def set_position(self, key, latlon, layer='', rotation=0, label=None, colour=None):$/;"	m	class:MPSlipMap
+set_rx_encoding	miniterm.py	/^    def set_rx_encoding(self, encoding, errors='replace'):$/;"	m	class:Miniterm
+set_service	mp_tile.py	/^    def set_service(self, service):$/;"	m	class:MPTile
+set_stream_rates	mavproxy.py	/^def set_stream_rates():$/;"	f
+set_tx_encoding	miniterm.py	/^    def set_tx_encoding(self, encoding, errors='replace'):$/;"	m	class:Miniterm
+set_zoom	mp_slipmap.py	/^    def set_zoom(self, ground_width):$/;"	m	class:MPSlipMap
+setup	miniterm.py	/^        def setup(self):$/;"	m	class:.Console
+setup	miniterm.py	/^    def setup(self):$/;"	m	class:ConsoleBase
+setup_file_menu	MAVExplorer.py	/^def setup_file_menu():$/;"	f
+setup_menus	MAVExplorer.py	/^def setup_menus():$/;"	f
+setvirtualenvproject	virtualenvwrapper.sh	/^function setvirtualenvproject {$/;"	f
+shlex_quotes	mavproxy.py	/^def shlex_quotes(value):$/;"	f
+show	mavproxy.py	/^    def show(self, f, pattern=None):$/;"	m	class:MPStatus
+showvirtualenv	virtualenvwrapper.sh	/^function showvirtualenv {$/;"	f
+sigloss	mavsigloss.py	/^def sigloss(logfile):$/;"	f
+size	mp_tile.py	/^    def size(self):$/;"	m	class:TileInfo
+slew	mavplayback.py	/^    def slew(self, value):$/;"	m	class:App
+sm	mp_slipmap.py	/^    sm = MPSlipMap(lat=opts.lat,$/;"	v
+sniff_field_spelling	mavkml.py	/^def sniff_field_spelling(mlog, source):$/;"	f
+sphere_error	magfit.py	/^def sphere_error(p, data):$/;"	f
+sphere_error	magfit_motors.py	/^def sphere_error(p, data):$/;"	f
+start	miniterm.py	/^    def start(self):$/;"	m	class:Miniterm
+start_download_thread	mp_tile.py	/^    def start_download_thread(self):$/;"	m	class:MPTile
+start_script	mavproxy.py	/^            start_script = os.path.join(os.environ['LOCALAPPDATA'], "MAVProxy", "version.txt")$/;"	v
+start_scripts	mavproxy.py	/^    start_scripts = []$/;"	v
+status	mavplayback.py	/^    def status(self):$/;"	m	class:App
+stop	miniterm.py	/^    def stop(self):$/;"	m	class:Miniterm
+suspend_port	miniterm.py	/^    def suspend_port(self):$/;"	m	class:Miniterm
+tag	mavfft_isb.py	/^        def tag(self):$/;"	m	class:mavfft_fttd.PlotData
+tile_to_path	mp_tile.py	/^    def tile_to_path(self, tile):$/;"	m	class:MPTile
+tiles_pending	mp_tile.py	/^    def tiles_pending(self):$/;"	m	class:MPTile
+timeshift	mavgraph.py	/^    timeshift = 0$/;"	v
+timeshift	mavgraph.py	/^timeshift = args.timeshift$/;"	v
+timestamp	mavlogdump.py	/^            timestamp = getattr(m, '_timestamp', None)$/;"	v
+timestamp	mavlogdump.py	/^    timestamp = getattr(m, '_timestamp', 0.0)$/;"	v
+tlist	mp_tile.py	/^        tlist = mt.area_to_tile_list(lat, lon, width=500, height=500,$/;"	v
+toggleglobalsitepackages	virtualenvwrapper.sh	/^function toggleglobalsitepackages {$/;"	f
+total	magfit.py	/^total = 0.0$/;"	v
+total	magfit_delta.py	/^total = 0.0$/;"	v
+total	magfit_gps.py	/^total = 0.0$/;"	v
+total	magfit_motors.py	/^total = 0.0$/;"	v
+total	mavgpslock.py	/^total = 0.0$/;"	v
+total	mavmission.py	/^total = 0.0$/;"	v
+total	mavparms.py	/^total = 0.0$/;"	v
+total	mavsigloss.py	/^total = 0.0$/;"	v
+total_dist	mavflighttime.py	/^total_dist = 0.0$/;"	v
+total_time	mavflighttime.py	/^total_time = 0.0$/;"	v
+totals	mavsummarize.py	/^totals = Totals()$/;"	v
+tx	miniterm.py	/^    def tx(self, text):$/;"	m	class:CR
+tx	miniterm.py	/^    def tx(self, text):$/;"	m	class:CRLF
+tx	miniterm.py	/^    def tx(self, text):$/;"	m	class:DebugIO
+tx	miniterm.py	/^    def tx(self, text):$/;"	m	class:Transform
+type	mavlogdump.py	/^        type = m.get_type()$/;"	v
+types	mavlogdump.py	/^    types = types.split(',')$/;"	v
+types	mavlogdump.py	/^types = args.types$/;"	v
+unichr	miniterm.py	/^    unichr = chr$/;"	v
+unload_module	mavproxy.py	/^def unload_module(modname):$/;"	f
+update_transformations	miniterm.py	/^    def update_transformations(self):$/;"	m	class:Miniterm
+upload_file	miniterm.py	/^    def upload_file(self):$/;"	m	class:Miniterm
+url	mp_tile.py	/^    def url(self, service):$/;"	m	class:TileInfo
+vec3	magfit_gps.py	/^class vec3(object):$/;"	c
+version	mavproxy.py	/^            version = f.readline()$/;"	v
+version	mavproxy.py	/^            version = pkg_resources.require("mavproxy")[0].version$/;"	v
+virtualenvwrapper	virtualenvwrapper.sh	/^function virtualenvwrapper {$/;"	f
+virtualenvwrapper_absolutepath	virtualenvwrapper.sh	/^function virtualenvwrapper_absolutepath {$/;"	f
+virtualenvwrapper_cd	virtualenvwrapper.sh	/^function virtualenvwrapper_cd {$/;"	f
+virtualenvwrapper_derive_workon_home	virtualenvwrapper.sh	/^function virtualenvwrapper_derive_workon_home {$/;"	f
+virtualenvwrapper_expandpath	virtualenvwrapper.sh	/^function virtualenvwrapper_expandpath {$/;"	f
+virtualenvwrapper_get_python_version	virtualenvwrapper.sh	/^function virtualenvwrapper_get_python_version {$/;"	f
+virtualenvwrapper_get_site_packages_dir	virtualenvwrapper.sh	/^function virtualenvwrapper_get_site_packages_dir {$/;"	f
+virtualenvwrapper_initialize	virtualenvwrapper.sh	/^function virtualenvwrapper_initialize {$/;"	f
+virtualenvwrapper_lazy_load	virtualenvwrapper_lazy.sh	/^        function virtualenvwrapper_lazy_load {$/;"	f
+virtualenvwrapper_load	virtualenvwrapper_lazy.sh	/^function virtualenvwrapper_load {$/;"	f
+virtualenvwrapper_mkproject_help	virtualenvwrapper.sh	/^function virtualenvwrapper_mkproject_help {$/;"	f
+virtualenvwrapper_mktemp	virtualenvwrapper.sh	/^function virtualenvwrapper_mktemp {$/;"	f
+virtualenvwrapper_mkvirtualenv_help	virtualenvwrapper.sh	/^function virtualenvwrapper_mkvirtualenv_help {$/;"	f
+virtualenvwrapper_run_hook	virtualenvwrapper.sh	/^function virtualenvwrapper_run_hook {$/;"	f
+virtualenvwrapper_setup_lazy_completion	virtualenvwrapper_lazy.sh	/^function virtualenvwrapper_setup_lazy_completion {$/;"	f
+virtualenvwrapper_setup_lazy_loader	virtualenvwrapper_lazy.sh	/^function virtualenvwrapper_setup_lazy_loader {$/;"	f
+virtualenvwrapper_setup_tab_completion	virtualenvwrapper.sh	/^function virtualenvwrapper_setup_tab_completion {$/;"	f
+virtualenvwrapper_show_workon_options	virtualenvwrapper.sh	/^function virtualenvwrapper_show_workon_options {$/;"	f
+virtualenvwrapper_tempfile	virtualenvwrapper.sh	/^function virtualenvwrapper_tempfile {$/;"	f
+virtualenvwrapper_verify_active_environment	virtualenvwrapper.sh	/^function virtualenvwrapper_verify_active_environment {$/;"	f
+virtualenvwrapper_verify_project_home	virtualenvwrapper.sh	/^function virtualenvwrapper_verify_project_home {$/;"	f
+virtualenvwrapper_verify_resource	virtualenvwrapper.sh	/^function virtualenvwrapper_verify_resource {$/;"	f
+virtualenvwrapper_verify_virtualenv	virtualenvwrapper.sh	/^function virtualenvwrapper_verify_virtualenv {$/;"	f
+virtualenvwrapper_verify_virtualenv_clone	virtualenvwrapper.sh	/^function virtualenvwrapper_verify_virtualenv_clone {$/;"	f
+virtualenvwrapper_verify_workon_environment	virtualenvwrapper.sh	/^function virtualenvwrapper_verify_workon_environment {$/;"	f
+virtualenvwrapper_verify_workon_home	virtualenvwrapper.sh	/^function virtualenvwrapper_verify_workon_home {$/;"	f
+virtualenvwrapper_workon_help	virtualenvwrapper.sh	/^function virtualenvwrapper_workon_help {$/;"	f
+wipeenv	virtualenvwrapper.sh	/^function wipeenv {$/;"	f
+workon	virtualenvwrapper.sh	/^function workon {$/;"	f
+write	mavproxy.py	/^    def write(self):$/;"	m	class:MPStatus
+write	miniterm.py	/^        def write(self, s):$/;"	m	class:.Out
+write	miniterm.py	/^    def write(self, text):$/;"	m	class:ConsoleBase
+write_bytes	miniterm.py	/^    def write_bytes(self, byte_string):$/;"	m	class:ConsoleBase
+writer	miniterm.py	/^    def writer(self):$/;"	m	class:Miniterm
+x	mavgraph.py	/^x = []$/;"	v
+y	mavgraph.py	/^y = []$/;"	v
+zero_time_base	mavlogdump.py	/^                                  zero_time_base=args.zero_time_base)$/;"	v
+zip	MPU6KSearch.py	/^    zip = zipfile.ZipFile(results, 'w')$/;"	v
+zooms	mp_tile.py	/^        zooms = [opts.zoom]$/;"	v
+zooms	mp_tile.py	/^        zooms = range(mt.min_zoom, mt.max_zoom+1)$/;"	v

@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="fs_gray_post">
+    <static>true</static>
+    <link name="link">
+      <pose>0 0 0 0 0 0</pose>
+	  <inertial>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.166667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.166667</iyy>
+          <iyz>0</iyz>
+          <izz>0.166667</izz>
+        </inertia>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>0.5</radius>
+            <length>3</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <cylinder>
+            <radius>0.5</radius>
+            <length>3</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://fs_gray_post/materials/scripts</uri>
+            <uri>model://fs_gray_post/materials/textures</uri>
+            <name>vrc/fs_gray_post</name>
+          </script>
+        </material>
+      </visual>
+	  <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model>
+</sdf>

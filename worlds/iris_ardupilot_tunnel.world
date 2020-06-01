@@ -1,0 +1,75 @@
+<sdf version="1.6">
+  <world name="default">
+    <physics type="ode">
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>100</iters>
+          <sor>1.0</sor>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.9</erp>
+          <contact_max_correcting_vel>0.1</contact_max_correcting_vel>
+          <contact_surface_layer>0.0</contact_surface_layer>
+        </constraints>
+      </ode>
+      <real_time_update_rate>0</real_time_update_rate>
+      <max_step_size>0.0025</max_step_size>
+    </physics>
+
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+    </light>
+
+    <include>
+       <uri>model://asphalt_plane</uri>
+    </include>
+
+    <model name="iris">
+      <pose> 0 0 0 0 0 0 </pose>
+      <include>
+        <uri>model://iris_with_standoffs_demo</uri>
+         <pose> 0 0 0 0 0 0 </pose>
+      </include>
+    </model>
+
+    <model name="tunnel1">
+      <pose> 23 0 0 0 0 0 </pose>
+      <include>
+        <uri>model://tunnel1</uri>
+          <pose> 23 0 0 0 0 0 </pose>
+      </include>
+    </model>
+
+    <wind>
+      <linear_velocity> 0 0 0 </linear_velocity>
+    </wind>
+
+    <gravity> 0 0 -9.8 </gravity>
+    <magnetic_field> 6e-06 2.3e-05 -4.2e-05 </magnetic_field>
+    <atmosphere type="adiabatic">
+      <temperature>298.15</temperature>
+      <pressure>101325</pressure>
+      <temperature_gradient>-0.0065</temperature_gradient>
+    </atmosphere>
+
+    <spherical_coordinates>
+      <latitude_deg> 48.878922 </latitude_deg>
+      <longitude_deg> 2.367782 </longitude_deg>
+      <elevation> 0 </elevation>
+      <heading_deg> 0 </heading_deg>
+    </spherical_coordinates>
+
+  </world>
+</sdf>

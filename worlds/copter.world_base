@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <physics type="ode">
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>100</iters>
+          <sor>1.0</sor>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.9</erp>
+          <contact_max_correcting_vel>0.1</contact_max_correcting_vel>
+          <contact_surface_layer>0.0</contact_surface_layer>
+        </constraints>
+      </ode>
+      <real_time_update_rate>-1</real_time_update_rate>
+      <!--
+      <max_step_size>0.0025</max_step_size>
+      -->
+    </physics>
+
+    <scene>
+        <shadows>1</shadows>
+        <background>0.3 0.3 0.3 1</background>
+        <sky>1</sky>
+        <grid>1</grid>
+    </scene>
+
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 100 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+  	<plugin name="wind" filename="libFuzzWindPlugin.so">
+        <linkName>base_link</linkName>
+    	<windDirection>0 0 0</windDirection>
+    	<windForceMean>0</windForceMean>
+    	<windGustDirection>0 1 0</windGustDirection>
+    	<windGustDuration>30</windGustDuration>
+    	<windGustStart>30</windGustStart>
+    	<windGustForceMean>0</windGustForceMean>
+        <xyz_offset>0 0 0</xyz_offset>
+  	</plugin>
+
+    <gravity> 0 0 -9.8 </gravity>
+    <magnetic_field> 6e-06 2.3e-05 -4.2e-05 </magnetic_field>
+    <atmosphere type="adiabatic">
+      <temperature>288.15</temperature>
+      <pressure>101325</pressure>
+      <temperature_gradient>-0.0065</temperature_gradient>  <!-- K/m -->
+    </atmosphere>
+
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>-35.363261</latitude_deg>
+      <longitude_deg>149.165230</longitude_deg>
+      <elevation>584</elevation>
+      <heading_deg>87</heading_deg>
+    </spherical_coordinates>
+
+    <include>
+      <uri>model://fs_ground_plane</uri>
+    </include>
+    
+    <include>
+      <uri>model://fs_asphalt_plane</uri>
+    </include>
+    
+    <model name="copter_iris">
+      <pose> 0 0 0 0 0 0 </pose>
+      <include>
+        <uri>model://iris_with_standoffs_demo</uri>
+         <pose> 0 0 0 0 0 0 </pose>
+      </include>
+    </model>
+
+    <!--
+    <model name='fs_box'>
+      <pose> 30 0 0 0 0 0 </pose>
+      <include>
+        <uri>model://fs_box</uri>
+      </include>
+    </model>
+    -->
+    
+    <!--
+    <model name="fs_tunnel">
+      <pose> 40 0 0 0 0 0 </pose>
+      <include>
+        <uri>model://fs_tunnel</uri>
+      </include>
+    </model>
+    -->
+
+    <!--
+    <model name='fs_cylinder'>
+      <pose> 10 0 0 0 0 0 </pose>
+      <include>
+        <uri>model://fs_cylinder</uri>
+      </include>
+    </model>
+
+    <model name='fs_sphere'>
+      <pose> 20 0 0 0 0 0 </pose>
+      <include>
+        <uri>model://fs_sphere</uri>
+      </include>
+    </model>
+    -->
+
+    <model name='fs_gray_wall'>
+      <pose> 20 0 0 0 0 0 </pose>
+      <include>
+        <uri>model://fs_gray_wall</uri>
+      </include>
+    </model>
+
+
+    <gui fullscreen='0'>
+      <camera name="my_camera">
+		<pose>-5 -1 2 0 -0.4 0.18</pose>
+        <!--<pose>-5.44 -32.191 15.295 0 0.136 0.94</pose>-->
+        <track_visual>
+          <min_dist>2</min_dist>
+          <max_dist>5</max_dist>
+          <name>copter_iris</name>
+          <static>1</static>
+          <use_model_frame>1</use_model_frame>
+          <xyz>-4 -1 1</xyz>
+          <!--<xyz>-5 -16 10</xyz>-->
+        </track_visual>
+      </camera>
+   </gui>
+
+  </world>
+</sdf>
