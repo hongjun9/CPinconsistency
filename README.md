@@ -29,7 +29,7 @@ This provides a prototype of our tool to play with a sample robotic system (Ardu
 3. VMiamge (apm_gazebo) includes:
     - Ubuntu 16.04.3 LTS
     - ArduCopter V3.7
-    - Customized Mavproxy 1.5.2
+    - Customized Mavproxy 1.8.5
     - Gazebo 8.6.0
     - Gazebo models (e.g., obstacles)
     - Gazebo plugins (e.g., wind generator)
