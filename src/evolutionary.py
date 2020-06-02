@@ -29,24 +29,24 @@ def evolution(test_id):
         init_individuals[i] = [0, input_vector]  #code, [input_vector]
     gen_id = str(test_id) + "_g0"
 
-    # evaluate ----------------------
+    # evaluate inits ----------------------
     init_individuals = evaluate(gen_id, init_individuals)   #given inputs
     init_individuals = non_dominated_sorting(init_individuals, setting.M, setting.V)
     print "@@init individuals", setting.N, gen_id
      
     for i in range(setting.N):
        log.info(str(init_individuals[i]))
-    
-    ## interactive plot
-    #if(setting.FIGON):
-    #    plot_scatter(individuals, "Generation Initial")
 
-    individuals = init_individuals
+    # end init
+
+    ##=========================================
     # start evolution
+    #
+    individuals = init_individuals
     for gen in range(0,setting.GEN):
         
         log.info("#########################################################################################")
-        log.info("############################# [#%3d / %3d] Evolution starts #############################" % (gen+1, G))
+        log.info("############################# [#%3d / %3d] Evolution starts #############################" % (gen+1, setting.GEN))
         log.info("#########################################################################################")
         gen_id = str(test_id) + "_g" + str(gen+1)
 
@@ -72,23 +72,22 @@ def evolution(test_id):
         #print(Style.RESET_ALL)
 
         ##--------------------------------------------------------
-        ### selection (binary tournament selection) - half from total
+        ### parents selection (binary tournament selection) - half from total
         # parents are selectd for reproduction to generate offspring
         pool = int(round(setting.N/2.0))  # size of mating pool (N/2)
         tour = 2                  # tournament size (selection pressure)
-        #If the tournament size is larger, weak individuals have a smaller chance to be selected, \ 
-        #because, if a weak individual is selected to be in a tournament, there is a higher probability \
+
+        #If the tournament size is larger, weak individuals have a smaller chance to be selected,  
+        #because, if a weak individual is selected to be in a tournament, there is a higher probability 
         #that a stronger individual is also in that tournament.
-        if setting.SCORE_OPTION == 3:
+        if setting.SCORE_OPTION == 3:   # random selection
             parent_individuals = random_selection(individuals, pool)
-        else: 
+        else:                           # tournament selection
             parent_individuals = tournament_selection(individuals, pool, tour)
+
         print "[",str(gen+1),"]", "@@------parent_individuals", len(parent_individuals)
         for i in range(len(parent_individuals)):
             print parent_individuals[i]
-
-        #if setting.FIGON and setting.SCORE_OPTION != 4:
-        #    plot_scatter(parent_individuals, "Generation " + str(gen+1) + " parents")
 
         ##--------------------------------------------------------
         ## genetic operator
@@ -96,6 +95,7 @@ def evolution(test_id):
         # evaluate offsprings (SIMULATION)
         print "[",str(gen+1),"]", "@@-------------- genetic operator  ---------------"
         candidate_individuals = genetic_operator(gen_id, individuals, parent_individuals, pool)
+
         print "[",str(gen+1),"]", "@@------candidate_individuals = individual + offspring", len(candidate_individuals)
         for i in range(len(candidate_individuals)):
             print candidate_individuals[i]
@@ -105,31 +105,32 @@ def evolution(test_id):
         for i in range(len(candidate_individuals)):
             print candidate_individuals[i]
 
-        #if setting.FIGON and setting.SCORE_OPTION != 4:
-        #    plot_scatter(candidate_individuals, "Generation " + str(gen+1) + " candidates")
 
         ##--------------------------------------------------------
         # select top N from candidates (individual + offspring)
         new_individuals = top_n_selection(candidate_individuals, setting.N)
         #new_individuals = tournament_selection(candidate_individuals, N, tour)
-        print "[GEN #",str(gen+1),"]", "@@------new_individuals", len(new_individuals)
-        for i in range(len(new_individuals)):
-            print new_individuals[i]
 
-        ## opt4
-        #if setting.SCORE_OPTION == 4:   #random individuals
-        #    new_individuals = random_pop_generation(setting.N)
+        ## opt4 : random population
+        if setting.SCORE_OPTION == 4:   #random individuals
+            new_individuals = random_pop_generation(setting.N)
 
         ###--------------------------------------------
         # plot
         #if setting.FIGON:
         #    plot_scatter(new_individuals, "Generation " + str(gen+1) + " new_individuals") 
         ##-----------------------------------------------
+
+        print "[GEN #",str(gen+1),"]", "@@------new_individuals", len(new_individuals)
+        for i in range(len(new_individuals)):
+            print new_individuals[i]
+
         individuals = new_individuals
 
+        #----------------------------
         # save output
         output_file_name = "genout_" + test_id + ".log"
-        output_file = setting.CPII_HOME + "/testlog/" + output_file_name    
+        output_file = setting.CPII_TESTLOG + "/" + output_file_name    
         outf = open(output_file, "a+")       # log for the resulting generation 
         outf.write("GENERATION " + str(gen_id) + "\n")
         for j in range(setting.N):
@@ -278,7 +279,7 @@ def random_population(test_id, G):
     
         # save output
         output_file_name = "genout_" + test_id + ".log"
-        output_file = setting.CPII_HOME + "/testlog/" + output_file_name    
+        output_file = setting.CPII_TESTLOG + "/" + output_file_name    
         outf = open(output_file, "a+")       # log for the resulting generation 
         outf.write("GENERATION " + str(gen_id) + "\n")
         for j in range(setting.N):

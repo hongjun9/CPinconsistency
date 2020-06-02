@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from os.path import expanduser
+import os
 
 # Modes
 TEST_MODE = 1       # 1: evolutionary cpi test, 2: random test (random population)
@@ -15,7 +16,12 @@ DEBUG = 1       # detailed logs
 USER_HOME = expanduser("~")
 MAINNAME = None         #target system name
 AUTOHOME = None         #target script home
-CPII_HOME = None        #main path: ~/cpii
+#CPII_HOME = None        #main path: ~/cpii
+CPII_HOME = USER_HOME + "/cpii"
+CPII_OUTPUTS = CPII_HOME + "/outputs"
+CPII_RESULT = CPII_HOME + "/result"
+CPII_TESTLOG = CPII_HOME + "/testlog"
+
 GZ_HOME = None          #gazebo home
 COMMAND = None          #lauchning command for main controller
 
@@ -59,6 +65,7 @@ Vmap = int('0000000000000000000000000000000000000000', 2) #bitmask for inputs
 #=============================================================
 
 SIM_COUNT = 0       # total simulation count
+CPI_COUNT = 0       # totla number of cpi found
 
 # Define Inputs ==========
 WORLD_WINDGUST_DIRECTION = 0    #xyz
@@ -80,11 +87,11 @@ INDEX_RANK = 3
 INDEX_CPIRANK = 4
 
 CODE_NONE = 0
-CODE_COMP = 1
+CODE_COMP = 1   #mission completed
 CODE_TP = 2
 CDOE_TN = 3
-CODE_FP = 4
-CODE_FN = 5
+CODE_FP = 4     #over-approximation
+CODE_FN = 5     #under-approximation
 # ================
 
 # SIMULATION
@@ -101,7 +108,7 @@ WAIT_TIME = 0 #(sec)
 
 def read_setting():
 
-    global CPII_HOME, GZ_HOME, AUTOHOME, COMMAND 
+    global GZ_HOME, AUTOHOME, COMMAND 
     global world_file, model_file, param_file, last_sim_log, sim_log_name, sim_log_file 
     global mission_file, mission_len, home_location, bounds
  
@@ -118,7 +125,14 @@ def read_setting():
         AUTOHOME = USER_HOME + "/ardupilot/Tools/autotest"
         #COMMAND = "cd " + AUTOHOME + "; ./sim_vehicle.py -N -v ArduCopter -f gazebo-iris -m --mav10 --map --console -I1 -D"
         COMMAND = "cd " + AUTOHOME + "; ./sim_vehicle.py -v ArduCopter -f gazebo-iris -m --mav10 --map --console -I1 -D"
-        CPII_HOME = USER_HOME + "/cpii"
+        #CPII_HOME = USER_HOME + "/cpii"
+        if not os.path.exists(CPII_OUTPUTS):
+            os.makedirs(CPII_OUTPUTS)
+        if not os.path.exists(CPII_RESULT):
+            os.makedirs(CPII_RESULT)
+        if not os.path.exists(CPII_TESTLOG):
+            os.makedirs(CPII_TESTLOG)
+
         GZ_HOME = USER_HOME + '/ardupilot_gazebo'
         world_file = GZ_HOME + '/worlds/copter.world'
         #model_file = GZ_HOME + '/models/fs_box/model.sdf'

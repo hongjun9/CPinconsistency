@@ -44,7 +44,7 @@ def runSim(id, cmd, TIMEOUT, MAINNAME, INIT_TIME, real):
         log.cinfo("#%s Dummy Simulation running ..." % (id))
 
         sim_out_name = "simout_" + id + ".log"
-        sim_out = expanduser("~") + "/cpii/outputs/" + sim_out_name        #arducopter *.log
+        sim_out = setting.CPII_OUTPUTS + "/" + sim_out_name        #arducopter *.log
         print "dummy sim out:", sim_out
         print "dummy sim log:", setting.sim_log_file
         outf = open(sim_out, "w")

@@ -16,8 +16,8 @@ def main():
     test_id = datetime.datetime.now().strftime("%Y%m%d_%I%M%S")
 
     setting.test_log_name = "test_" + test_id + ".log"                   #log file name
-    setting.log_file = setting.CPII_HOME + "/testlog/" + setting.test_log_name   #log file path 
-    setting.mission_log_file = setting.CPII_HOME + "/testlog/" + "mission_" + test_id + ".txt" 
+    setting.log_file = setting.CPII_TESTLOG + "/" + setting.test_log_name   #log file path 
+    setting.mission_log_file = setting.CPII_TESTLOG + "/mission_" + test_id + ".txt" 
 
     log_level = log.DEBUG #INFO
     log.init(setting.log_file, log_level) 
@@ -30,6 +30,7 @@ def main():
     start_time = time.time()
 
     if (setting.TEST_MODE == 2):
+    
         ## Random testing
         evolutionary.random_population(test_id, setting.GEN); 
 
@@ -41,25 +42,21 @@ def main():
             exit()
 
         ## start the Evolution process (T evolutions)
-        evolution_finished = evolutionary.evolution(test_id)
+        evolutionary.evolution(test_id)
 
-        #if evolution_finished == True:
-        #    print "===========Evolution finished=============="
-        ##========================================
-        ## after testing -------------------------
-        # (optional) plot individuals
-        #plot_result(test_id, GEN, total_individuals)  
-        #log.close_log()
     else:
         print "ERROR: NOT SUPPORTED TEST MODE"
 
     # test stat ========================================================
-    print "#POP: ", setting.GEN*setting.N
-    print "genout_" + test_id + ".log" 
+    log.info("================= TEST STATS ====================")
+    log.info("Population logs: genout_" + str(test_id) + ".log")
+    log.info("#POP: " + str(setting.GEN*setting.N))
+    log.info("#CPI cases: " + str(setting.CPI_COUNT))
+
     elapsed_time = time.time() - start_time
     hours, rem = divmod(elapsed_time, 3600)
     minutes, seconds = divmod(rem, 60)
-    print "\nTEST_STAT: #TOTAL_SIM: " + str(setting.SIM_COUNT) + ", TOTAL_TIME: " + "{:0>2}:{:0>2}:{:05.2f}".format(int(hours),int(minutes),seconds)
+    log.info("#TOTAL_SIM: " + str(setting.SIM_COUNT) + ", TOTAL_TIME: " + "{:0>2}:{:0>2}:{:05.2f}".format(int(hours),int(minutes),seconds))
 
 
 
@@ -111,6 +108,6 @@ if __name__ == '__main__':
     if(input_num != setting.V):
         print("[ERROR] check the number of input V and range Vrange")
         exit()
-
+    
     main()
 

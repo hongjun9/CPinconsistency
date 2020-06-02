@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 import math
 from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
+import os
 
 
 #Input Ranges
@@ -26,16 +27,8 @@ ZLIM = [-1,1]
 PLIM = [-4,4]
 
 
-USER_HOME = expanduser("~")
-world_file = USER_HOME + '/ardupilot_gazebo/worlds/copter.world'
-AUTOHOME = USER_HOME + "/ardupilot/Tools/autotest"   
 CPII_HOME = USER_HOME + "/cpii"
-GZ_HOME = USER_HOME + '/ardupilot_gazebo'
-world_file = GZ_HOME + '/worlds/copter.world'
-model_file = GZ_HOME + '/models/fs_gray_wall/model.sdf'    #model file
-param_file = CPII_HOME + '/param.txt'
-OUTPUT_HOME = CPII_HOME + '/outputs/'
-LOG_HOME = CPII_HOME + '/testlog/'
+CPII_TESTLOG = CPII_HOME + '/testlog'
 
 
 #if(FIGON):
@@ -107,7 +100,9 @@ def plot_result(test_id, GEN, total_individuals, M):
         plt.show()
         plt.pause(0.9)
 
-    plt.savefig(CPII_HOME + "/testlog/plots/"+test_id)  #save final gen
+    if not os.path.exists(CPII_TESTLOG + "/plots"):
+        os.makedirs(CPII_OUTPUTS + "/plots")
+    plt.savefig(CPII_TESTLOG + "/plots/"+test_id)  #save final gen
     plt.waitforbuttonpress()
 
 
@@ -117,7 +112,7 @@ def main(argv):
     M = 0
     V = 0 
 
-    path = LOG_HOME
+    path = CPII_TESTLOG
     for file in os.listdir(path):
         log_file = None
         if file.endswith(".log"):
