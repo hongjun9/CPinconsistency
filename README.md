@@ -145,6 +145,29 @@ The *individual* consists of the vulnerability code, input, output, and ranking.
 	mu, mum: distribution index for crossover and mutation (default 20, 20)
 	pr: proportion of crossover to mutaiton (default 0.9)
 
+## Directory Structure
+
+* ardupilot
+	* ArduCopter - target control program
+	* libraries - control libraries
+	* Tools/autotest - scripts, logs, missions.
+* ardupilot_gazebo
+	* gazeob model, world, plugins
+* cpii - evolutionary searching tool
+	* outputs - simulation logs 
+	* testlog - searching logs
+	* result - cpi cases 
+	* src 
+		* main - entry point
+		* setting - configuraiton, parameters
+		* mission - mission generator
+		* evaluate - execution engine
+		* simulator - simulation driver
+		* evolutionary - evolutioanry serach algorithm
+		* sorting - non dominated sorting based on pareto optimality
+		* output_parser - vehicle-specific log parser
+		* sdfmutator - mutate sdf files
+		* logger, plotter - utilities
 
 ## How to run
 	
