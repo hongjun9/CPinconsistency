@@ -215,7 +215,7 @@ The cpi log provides the mission and inputs that trigger the finding vulnerabili
 
 
 ### Disclaimer
-The VM has only been tested with our exmaple system. If you want to use the tool for the different system. Specific configuraiton should be customized properly. Any bug reports and feedbacks would be welcome.  Email: choi293@purdue.edu
+The VM has only been tested with our exmaple system. If you want to use the tool for the different system. Specific configuraiton should be customized properly. Any bug reports and feedbacks would be welcome.  Email: hongjun@purdue.edu
 
 
 ### Further reading
