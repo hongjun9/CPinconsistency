@@ -40,7 +40,7 @@ This provides a prototype of our tool to play with a sample robotic system (Ardu
 
 The provided VM image (id: apm / password: apm) includes all the programs and related packages to test the CPII tool, expect the Matlab tools. For the system modeling, Matlab is essential and should be installed in your host machine. 
 
-VM image are available: (to be posted)
+VM image will be available: email me (choi293@purdue.edu)
 
 In this setup, we assume that the user knows how to make the system model with System Identification (SI) technique. In this tutorial, we do not provide the details. Please read our previous paper "Detecting attacks against robotic vehicles: A control invariant approach (CCS'18)" and the previous tutorial at: https://github.com/hongjun9/CPS_Invariant
 
